@@ -1,1 +1,108 @@
 /* Add styles for application here */
+body{
+	margin:0;
+}
+#txts1{
+	
+	float:right;
+	text-align:right;
+	margin-right:20px;
+}
+.texts{
+	font-size:30px;
+	color:white;
+}
+#txtcolor{
+	color:white;
+	padding:10px;
+	
+}	
+.imag{
+	width:50px;
+	height:50px;
+	margin-left:10px;
+	
+}
+.imag:hover{
+	transform: rotate(20deg);
+}
+.mytale{
+	margin-left:200px;
+	color:green;
+}
+.mytab{
+	margin-left:100px;
+	
+}
+.myhead{
+	margin-left:200px;
+	
+}
+table a{
+	color:black;
+}
+.tgap{
+	width:150px;
+}
+.tright{
+	text-align:right;
+}
+.tleft{
+	text-align:left;
+}
+.tcenter{
+	text-align:center;
+}
+header {
+    width: 100%;
+	height:80px;
+    background-color: #2d4bba;
+}
+footer {
+    margin-top: 560px;
+    width: 100%;
+   	height:80px;	
+    background-color: #bfbaba;
+}
+.footflat{
+	margin-top: 540px;
+}
+.foote{
+	 margin-top: 620px;
+}
+.footeo{
+	 margin-top: 680px;
+}
+.footos{
+	margin-top: 510px;
+}
+.txtname{
+	width:580px;
+	border:0.5px solid black;
+}
+.txtno{
+	width:150px;
+	border:0.5px solid black;
+	text-align:right;
+}
+.txtdate{
+	
+	border:0.5px solid black;
+}
+#chk1{
+	width:30px;
+	height:30px;
+}
+.btn{
+	background-color: #2d4bba;
+	border:1px solid #2d4bba;
+	width:150px;
+	height:50px;
+	color:white;
+}
+::placeholder{
+	color:black;
+}
+.txtcol{
+	color:green;
+}

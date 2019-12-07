@@ -1,0 +1,83 @@
+<!Doctype html>
+<html>
+	<head>
+		<link href="./style/style.css" rel="Stylesheet" type="text/css"/>
+		<script src="./js/script.js" type="text/javascript"></script>
+	</head>
+	<body> 
+				<header >
+						<span class="texts">Movie Cruiser</span>
+						<img class="imag" src="./images/logo.png"/> 
+						<p id="txts1"><a id="txtcolor" href="movie-list-admin.html">Movies</a></p>
+				</header>
+				<br/>
+				
+				<h1 class="myhead">Edit Movie</h1>
+				<form class="mytab" action="./edit-movie-status.html"  name="myForm" onsubmit="return validateForm()" method="Post">
+				    <table class="mytab wowtab">
+				
+							<tr>
+								<td>Title:</td>
+							</tr>
+
+							<tr>					
+								<td colspan="4">
+									<input type="text" name="name1" class="txtname" value="Avengers -End Game" min="2" max="100" />
+								</td>
+							</tr>
+							
+							<tr>
+								<td>Gross($)</td>
+								<td>Active</td>
+								<td>Date of Launch</td>
+								<td>Genre</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<input type="number" name="number1" value="2787965087" class="txtno"/></td>
+								<td>
+									<label for="rdo1" class="radios">
+									<input type="radio" checked name="rdo1"id="rd1" value="Yes"/>Yes
+									<input type="radio"  name="rdo1" id="rd1" value="No"/>No
+									</label>
+								</td>
+								<td>
+									<input type="text" name="dates1" value="27/04/2022" class="txtdate" pattern="/[0-9]{2}/\[0-9]{2}/\[0-9]{4}/" />
+								</td>
+								<td>
+									<select class="tabsize ">
+									<option value="SF">Science Fiction	</option>
+									<option  value="SH">Superhero</option>
+									<option  value="ROM">Romance</option>
+									<option  value="CMY">Comedy</option>
+									<option  value="ADV">Adventure</option>
+									<option  value="THR">Thriller</option>
+									</select>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<label for="chk1">
+									<input type="checkbox" name="chkdel" value="FD" id="chk1" checked="true"/>Has Teaser
+									</label>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<input type="submit" value="Save" class="btn"/>
+								</td>		
+							</tr>
+				
+					</table>
+				</form>
+				<br/>
+				<footer class="footos">
+						<h5>Copyright &copy 2019</h5>
+				</footer>
+				
+			
+	</body>
+</html>
