@@ -16,16 +16,5 @@ function validateForm(){
 	 } else {
 		return true;
 	 }
-	if (/[^0-9/]/.test(dor)) {
-		alert("date must be in numbers");
-		return false;
-	} else {
-		return true;  
-	}
-	if (txt.length>2 ||txt.length<100) {
-		alert("title must be in 2-100 Characters");
-		return false;
-	} else {
-		return true;  
-	}
+	
 }
