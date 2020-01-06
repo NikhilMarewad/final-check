@@ -49,7 +49,12 @@ public class FavoriteDaoCollectionImplTest {
 
 	private static void testRemovefavoriteItem() {
 		FavoriteDaoCollectionImpl favoriteDao = new FavoriteDaoCollectionImpl();
-		favoriteDao.removeFavoriteItem(1, 1);
+		try {
+			favoriteDao.removeFavoriteItem(1, 1);
+		} catch (FavoriteEmptyException e) {
+			
+			e.printStackTrace();
+		}
 	}
 
 }

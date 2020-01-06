@@ -51,9 +51,13 @@ public class FavoriteDaoCollectionImpl implements FavoriteDao {
 	}
 
 	@Override
-	public void removeFavoriteItem(long userId, long movieitemId) {
-		// List<MovieItem> movies = new ArrayList<>();
+	public void removeFavoriteItem(long userId, long movieitemId) throws FavoriteEmptyException{
 		List<MovieItem> movieItem = userFavorite.get(userId).getMovieItemList();
+		if(movieItem.isEmpty())
+		{
+			throw new FavoriteEmptyException();
+		}
+		
 		for (MovieItem m : movieItem) {
 			if (m.getId() == movieitemId) {
 				movieItem.remove(m);

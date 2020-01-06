@@ -27,21 +27,13 @@ public class MovieItem {
 	public MovieItem(long id, String title, long boxOffice, boolean active, Date dateOfLaunch, String genre,
 			boolean hasTeaser) {
 		super();
+		this.id = id;
 		this.title = title;
 		this.boxOffice = boxOffice;
 		this.active = active;
 		this.dateOfLaunch = dateOfLaunch;
 		this.genre = genre;
 		this.hasTeaser = hasTeaser;
-		this.id = id;
-	}
-
-	public long getId() {
-		return id;
-	}
-
-	public void setId(long id) {
-		id = id;
 	}
 
 	public String getTitle() {
@@ -65,15 +57,15 @@ public class MovieItem {
 	}
 
 	public void setActive(boolean active) {
-		active = active;
+		this.active = active;
 	}
 
-	public Date getDateOflaunch() {
+	public Date getDateOfLaunch() {
 		return dateOfLaunch;
 	}
 
-	public void setDateOflaunch(Date dateOfLaunch) {
-		dateOfLaunch = dateOfLaunch;
+	public void setDateOfLaunch(Date dateOfLaunch) {
+		this.dateOfLaunch = dateOfLaunch;
 	}
 
 	public String getGenre() {
@@ -81,7 +73,7 @@ public class MovieItem {
 	}
 
 	public void setGenre(String genre) {
-		genre = genre;
+		this.genre = genre;
 	}
 
 	public boolean isHasTeaser() {
@@ -90,6 +82,14 @@ public class MovieItem {
 
 	public void setHasTeaser(boolean hasTeaser) {
 		this.hasTeaser = hasTeaser;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	@Override

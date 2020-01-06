@@ -42,7 +42,7 @@ public class MovieItemDaoCollectionImpl implements MovieItemDao {
 		
 		Date d = new Date();
 		for (MovieItem m : movieItemList) {
-			if (m.isActive() && m.getDateOflaunch().before(d)) {
+			if (m.isActive() && m.getDateOfLaunch().before(d)) {
 				movieItemCustomer.add(m);
 			}
 		}
@@ -56,7 +56,7 @@ public class MovieItemDaoCollectionImpl implements MovieItemDao {
 		x.setTitle(movieItem.getTitle());
 		x.setBoxOffice(movieItem.getBoxOffice());
 		x.setActive(movieItem.isActive());
-		x.setDateOflaunch(movieItem.getDateOflaunch());
+		x.setDateOfLaunch(movieItem.getDateOfLaunch());
 		x.setGenre(movieItem.getGenre());
 		x.setHasTeaser(movieItem.isHasTeaser());
 
