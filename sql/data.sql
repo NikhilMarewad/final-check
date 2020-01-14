@@ -29,13 +29,13 @@ select * from movie_item;
 ----------- Showing One Record before updating from movie_item table  ----------
 --------------------------------------------------------------------------------
 select 
- mo_id,
- mo_title,
- mo_box_office,
- mo_active,
- mo_date_of_launch,
- mo_genre,
- mo_has_teaser 
+ mo_id as Id,
+ mo_title as Title,
+ mo_box_office Box_office,
+ mo_active as Active,
+ mo_date_of_launch as Date_of_Launch,
+ mo_genre as Genre,
+ mo_has_teaser as Has_Teaser 
  from movie_item
  where mo_id=1;
 
@@ -54,13 +54,13 @@ update movie_item
 -------- Showing One Record after updating from movie_item table  -------------
 --------------------------------------------------------------------------------
 select 
- mo_id,
- mo_title,
- mo_box_office,
- mo_active,
- mo_date_of_launch,
- mo_genre,
- mo_has_teaser 
+  mo_id as Id,
+ mo_title as Title,
+ mo_box_office Box_office,
+ mo_active as Active,
+ mo_date_of_launch as Date_of_Launch,
+ mo_genre as Genre,
+ mo_has_teaser as Has_Teaser 
  from movie_item 
  where mo_id=1;
 
@@ -75,10 +75,10 @@ select * from movie_item;
 ----------------------- Showing Records of Customer Detials --------------------
 --------------------------------------------------------------------------------
 select 
- mo_title,
- mo_box_office,
- mo_genre,
- mo_has_teaser
+ mo_title as Title,
+ mo_box_office Box_Office,
+ mo_genre as Genre,
+ mo_has_teaser as Has_Teaser
  from movie_item 
  where mo_active='yes'
  and mo_date_of_launch<current_date(); 
@@ -131,14 +131,13 @@ select * from favorites;
 -------------- Showing Records of favorites detials ---------------------------
 -------------------------------------------------------------------------------
 select 
- f.fa_us_id,
- m.mo_title,
- m.mo_box_office,
- m.mo_genre,
- m.mo_has_teaser
+ m.mo_title as Tile,
+ m.mo_box_office as Box_Office,
+ m.mo_genre as Genre,
+ m.mo_has_teaser as Has_Teaser
  from movie_item m 
  join favorites f 
- on m.mo_id=f.fa_mo_id;
+ on m.mo_id=f.fa_mo_id where fa_us_id=102;
 
 -------------- Deleting One Record of favorites Table---------------------------
 ---------------------------------------------------------------------------------
