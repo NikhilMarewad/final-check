@@ -10,7 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.cognizant.moviecruiser.dao.FavoriteDao;
 import com.cognizant.moviecruiser.dao.FavoriteDaoCollectionImpl;
+import com.cognizant.moviecruiser.dao.FavoriteDaoSqlImpl;
 import com.cognizant.moviecruiser.dao.FavoriteEmptyException;
 import com.cognizant.moviecruiser.model.MovieItem;
 
@@ -36,7 +38,7 @@ public class ShowFavoriteServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		try {
-			FavoriteDaoCollectionImpl favoriteItemDao = new FavoriteDaoCollectionImpl();
+			FavoriteDao favoriteItemDao = new FavoriteDaoSqlImpl();
 			List<MovieItem> movieItemList = favoriteItemDao.getAllFavoriteItem(1);
 			long favTotal=0;
 			for(MovieItem m:movieItemList)

@@ -143,7 +143,7 @@ select
 ---------------------------------------------------------------------------------
 Delete 
  from favorites
- where fa_mo_id=5
+ where fa_us_id=104 and fa_mo_id=5
  limit 1;
 
 -------------- Showing Records of favorites Table-------------------------------

@@ -23,6 +23,11 @@ public class MovieItem {
 	private boolean hasTeaser;
 
 	private long id;
+	
+	public MovieItem() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
 	public MovieItem(long id, String title, long boxOffice, boolean active, Date dateOfLaunch, String genre,
 			boolean hasTeaser) {

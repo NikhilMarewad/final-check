@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.cognizant.moviecruiser.dao.MovieItemDao;
 import com.cognizant.moviecruiser.dao.MovieItemDaoCollectionImpl;
+import com.cognizant.moviecruiser.dao.MovieItemDaoSqlImpl;
 import com.cognizant.moviecruiser.model.MovieItem;
 import com.cognizant.moviecruiser.util.DateUtil;
 
@@ -63,7 +64,7 @@ public class EditMovieItemServlet extends HttpServlet {
 			
 			try {
 			MovieItem movieItemList = new MovieItem(id, title, boxOffice, active,DateUtil.convertToDate(dateOfLaunch), genre, hasTeaser);	
-			MovieItemDao movieItemDao = new MovieItemDaoCollectionImpl();
+			MovieItemDao movieItemDao = new MovieItemDaoSqlImpl();
 			movieItemDao.modifyMovieItem(movieItemList);
 			request.setAttribute("msg", "Movie details saved successfully");
 			RequestDispatcher rd = request.getRequestDispatcher("edit-movie-status.jsp");

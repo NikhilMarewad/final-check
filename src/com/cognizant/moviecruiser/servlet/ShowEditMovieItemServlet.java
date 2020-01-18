@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.cognizant.moviecruiser.dao.MovieItemDao;
 import com.cognizant.moviecruiser.dao.MovieItemDaoCollectionImpl;
+import com.cognizant.moviecruiser.dao.MovieItemDaoSqlImpl;
 import com.cognizant.moviecruiser.model.MovieItem;
 
 /**
@@ -34,18 +35,12 @@ public class ShowEditMovieItemServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		try {
-			MovieItemDao movieItemDao = new MovieItemDaoCollectionImpl();
-			long movieItemId = Long.parseLong(request.getParameter("movieItemId"));
-			MovieItem movieItemList = movieItemDao.getMovieItem(movieItemId);
-			request.setAttribute("movieItemList", movieItemList);
-			RequestDispatcher rd = request.getRequestDispatcher("edit-movie.jsp");
-			rd.forward(request, response);
-
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		MovieItemDao movieItemDao = new MovieItemDaoSqlImpl();
+		long movieItemId = Long.parseLong(request.getParameter("movieItemId"));
+		MovieItem movieItemList = movieItemDao.getMovieItem(movieItemId);
+		request.setAttribute("movieItemList", movieItemList);
+		RequestDispatcher rd = request.getRequestDispatcher("edit-movie.jsp");
+		rd.forward(request, response);
 
 	}
 

@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.cognizant.moviecruiser.dao.FavoriteDao;
 import com.cognizant.moviecruiser.dao.FavoriteDaoCollectionImpl;
+import com.cognizant.moviecruiser.dao.FavoriteDaoSqlImpl;
 import com.cognizant.moviecruiser.dao.FavoriteEmptyException;
 
 /**
@@ -33,7 +35,7 @@ public class RemoveFavoriteServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		FavoriteDaoCollectionImpl favoriteDao = new FavoriteDaoCollectionImpl();
+		FavoriteDao favoriteDao = new FavoriteDaoSqlImpl();
 		long movieItemId = Long.parseLong(request.getParameter("movieItemId"));
 		try {
 			favoriteDao.removeFavoriteItem(1, movieItemId);
